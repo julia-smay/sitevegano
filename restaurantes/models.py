@@ -4,7 +4,7 @@ class Restaurante(models.Model):
 
     OPCOES_CATEGORIA = [
         ("SELF SERVICE", "Self service"),
-        ("HAMBURGUERIA", "Hamburgueria"),
+        ("BURGER", "Burger"),
         ("SUSHI", "Sushi"),
     ]
 
