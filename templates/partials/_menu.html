@@ -1,0 +1,29 @@
+{% load static %}
+<div class="pagina-inicial">
+    <header class="cabecalho">
+        <img src="{% static '/assets/logo/logo.png' %}" class="logo"  alt="Logo" />
+        {% for message in messages %}
+        <div class="alert alert-success">
+            <p id="messages">{{message}}</p>
+        </div>
+        {% endfor %}
+        <div class="cabecalho__busca">
+            <div class="busca__fundo">
+                <form class="busca__interior" action="{% url 'buscar' %}">
+                    <input style="color:white;" class="busca__input" name= 'buscar' type="text" placeholder="O que você procura?">
+                    <button class="busca__botao" type ='submit'>
+                        <img class="busca__icone" src="{% static '/assets/ícones/1x/search1.png' %}" alt="ícone de search">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main class="principal">
+        <section class="menu-lateral">
+            <nav class="menu-lateral__navegacao">
+                <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/botao-home.png' %}"> Home</a>
+                <a href="{% url 'login' %}"><img src="{% static '/assets/ícones/1x/conecte-se.png' %}"> Login</a>
+                <a href="{% url 'cadastro' %}"><img src="{% static '/assets/ícones/1x/mais.png' %}"> Cadastro </a>
+                <a href="{% url 'logout' %}"><img src="{% static '/assets/ícones/1x/switch.png' %}"> Sair</a>
+            </nav>
+        </section>

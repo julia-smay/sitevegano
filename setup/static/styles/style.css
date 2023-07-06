@@ -340,25 +340,6 @@ input::placeholder {
     justify-content: space-between;
 }
 
-.rodape {
-    background-color: #04244F;
-    width: 100%;
-    padding: 1.5rem 3rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    color: #FFFFFF;
-}
-
-.rodape__icones {
-    width: 80px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.rodape__texto {
-    font-size: 1.1rem;
-}
 
 .tags {
     padding: 1.5rem 0;
@@ -449,10 +430,10 @@ input::placeholder {
 
 .busca__botao{
     cursor: pointer;
-        border: 1px solid transparent;
-        background-color: transparent;
-        color: #3498db;
-        font-size: 1.5em;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #3498db;
+    font-size: 1.5em;
 }
 
 .busca__interior{

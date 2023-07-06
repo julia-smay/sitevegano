@@ -14,7 +14,7 @@ def detalhes(request, rest_id):
     return render(request, 'restaurantes/detalhes.html', {'restaurante': restaurante})
 
 def buscar(request):
-    restaurantes = Restaurante.objects.all() # Restaurante.objects.all()
+    restaurantes = Restaurante.objects.all() 
     
     if "buscar" in request.GET:
         if not request.user.is_authenticated:

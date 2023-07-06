@@ -1,40 +1,6 @@
+{% extends 'restaurantes/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floripa Veg</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
-</head>
-
-<body>
-    <div class="pagina-inicial">
-        <header class="cabecalho">
-            <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" />
-            <div class="cabecalho__busca">
-                <div class="busca__fundo">
-                    <form class="busca__interior" action="{% url 'buscar' %}">
-                        <input style="color:white;" class="busca__input" name= 'buscar' type="text" placeholder="O que você procura?">
-                        <button class="busca__botao" type ='submit'>
-                            <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </header>
-        <main class="principal">
-            <section class="menu-lateral">
-                <nav class="menu-lateral__navegacao">
-                    <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
-                    <a href="{% url 'logout' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Sair</a>
-                </nav>
-            </section>
+{% block content %}
             <section class="detalhes">
                 <div class="detalhes__apresentacao">
                     <h1 class="detalhes__apresentacao__titulo">{{ restaurante.nome }}</h1>
@@ -63,63 +29,4 @@
         </main>
     </div>
  
-</body>
-
-</html>
-
-
-
-<!-- {% load static %}
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site vegano</title>
-    <link rel="stylesheet" href="{% static 'styleDetalhes.css' %}">
-</head>
-<body>
-    <header class="cabecalho">
-        <div class="container">
-            <h1 class="cabecalho__titulo">
-                <a href="#">Site vegano</a>
-            </h1>
-
-            <nav class="cabecalho__nav">
-                <a class="cabecalho__nav__link" href="{% url 'index' %}">Home</a>
-                <a class="cabecalho__nav__link" href="{% url 'login' %}">Login</a>
-                <a class="cabecalho__nav__link" href="{% url 'cadastro' %}">Cadastro</a>
-                <a class="cabecalho__nav__link" href="{% url 'logout' %}">Sair</a>
-            </nav>
-        </div>
-	</header>
-    <main class="detalhes">
-        <section class = "detalhes__apresentacao">
-            <h1 class="detalhes__apresentacao__titulo">{{ restaurante.nome }}</h1>
-            {% if restaurante.foto == "" or restaurante.foto == null %}
-            <img class="imagem__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}">
-            {% else %}
-            <img class="imagem__imagem" src="{{ restaurante.foto.url }}">
-            {% endif %}
-            <p class="detalhes__apresentacao__descricao">Vários tipos de nhoque vegano, além de carnes veganas e 
-                frutos do mar veganos, em um salão sofisticado vegano com murais coloridos veganos.</p>
-        </section>
-        <section class="detalhes__caracteristicas">
-            <h2 class="detalhes__caracteristicas__titulo">CATEGORIA</h2>
-            <p class="detalhes__caracteristicas__conteudo">{{ restaurante.categoria }}</p>
-            <h2 class="detalhes__caracteristicas__titulo">AVALIAÇÃO</h2>
-            <p class="detalhes__caracteristicas__conteudo">{{ restaurante.nota }}</p>
-            <h2 class="detalhes__caracteristicas__titulo">FAIXA DE PREÇO</h2>
-            <p class="detalhes__caracteristicas__conteudo">{{ restaurante.faixa_preco }}</p>
-            <h2 class="detalhes__caracteristicas__titulo">INFORMAÇÕES ADICIONAIS</h2>
-            <p class="detalhes__caracteristicas__conteudo">{{ restaurante.informacoes_adicionais }}</p>
-            <h2 class="detalhes__caracteristicas__titulo">LOCALIZAÇÃO</h2>
-            <p class="detalhes__caracteristicas__conteudo">{{ restaurante.localizacao }}</p>
-            <h2 class="detalhes__caracteristicas__titulo">CONTATO</h2>
-            <p class="detalhes__caracteristicas__conteudo">{{ restaurante.contato }}</p>
-        </section>
-    </main>
-</body>
-</html> -->
+{% endblock %}

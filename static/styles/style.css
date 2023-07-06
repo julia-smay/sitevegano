@@ -94,7 +94,7 @@ table {
 
 .busca__fundo {
     align-items: center;
-    background-color: #8FAA54;
+    background-color: #F2E8CD;
     border-radius: 8px;
     display: flex;
     margin: 0 auto;
@@ -116,8 +116,7 @@ input::placeholder {
 
 .busca__icone {
     cursor: pointer;
-    width: 2rem;
-    height: 2rem;
+    height: 60%;
 }
 
 .cards {
@@ -341,25 +340,6 @@ input::placeholder {
     justify-content: space-between;
 }
 
-.rodape {
-    background-color: #04244F;
-    width: 100%;
-    padding: 1.5rem 3rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    color: #FFFFFF;
-}
-
-.rodape__icones {
-    width: 80px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.rodape__texto {
-    font-size: 1.1rem;
-}
 
 .tags {
     padding: 1.5rem 0;
@@ -450,10 +430,10 @@ input::placeholder {
 
 .busca__botao{
     cursor: pointer;
-        border: 1px solid transparent;
-        background-color: transparent;
-        color: #3498db;
-        font-size: 1.5em;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #3498db;
+    font-size: 1.5em;
 }
 
 .busca__interior{
@@ -487,4 +467,8 @@ input::placeholder {
 
 .form-control{
     border: 1px solid #3B6744;
+}
+
+.logo{
+    height: 80px;
 }
